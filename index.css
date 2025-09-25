@@ -1,0 +1,88 @@
+* {
+  font-family: NHaasGrotesk, Helvetica, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+}
+
+body {
+  margin: 0;
+  padding: 0 32px;
+}
+
+section {
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+.nav {
+  padding: 0 10px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Benne", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+  padding: 0;
+  border: none;
+  height: 1em;
+  box-sizing: content-box;
+}
+
+h1 {
+  font-size: 72pt;
+}
+
+h2 {
+  font-size: 36pt;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 18pt;
+  font-weight: 500;
+}
+
+p {
+  font-size: 12pt;
+  margin: 0 0 16px 0;
+}
+
+a {
+  color: #227b4f;
+  text-decoration: none;
+}
+
+a::after {
+  color: #10472c;
+}
+
+#home {
+  margin: 64px 0 256px 0;
+}
+
+.projectDiv {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  color: rgb(141, 141, 141);
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #227b4f;
+  margin: 20px 0;
+}
