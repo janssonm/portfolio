@@ -1,27 +1,49 @@
 * {
   font-family: NHaasGrotesk, Helvetica, Arial, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol;
+    scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0 32px;
+  top: 0;
 }
 
 section {
 }
 
 #navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  list-style: none;
-  padding: 0;
-  text-decoration: none;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+}
+
+#navbar {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
 }
 
 .nav {
   padding: 0 10px;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 0;
 }
 
 h1,
@@ -43,12 +65,13 @@ h1 {
 }
 
 h2 {
-  font-size: 36pt;
+  font-size: 22pt;
+  font-weight: bold;
   font-weight: 500;
 }
 
 h3 {
-  font-size: 18pt;
+  font-size: 16pt;
   font-weight: 500;
 }
 
@@ -67,7 +90,11 @@ a::after {
 }
 
 #home {
-  margin: 64px 0 256px 0;
+  padding: 64px 0 256px 0;
+}
+
+#projects {
+  padding-top: 64px;
 }
 
 .projectDiv {
@@ -80,9 +107,14 @@ a::after {
   color: rgb(141, 141, 141);
 }
 
-.line {
-  height: 1px;
-  width: 100%;
-  background-color: #227b4f;
-  margin: 20px 0;
+.imageDiv {
+  display: flex;
+  height: 192px;
+  margin: 32px 0;
+}
+
+img {
+  object-fit: contain;
+  height: 100%;
+  padding-right: 16px;
 }

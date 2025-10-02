@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio / Matilda Jansson</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,15 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="images/Rectangle 1.png" />
+    <link rel="icon" href="images/favicon.png" />
   </head>
   <body>
-    <nav>
-      <ul id="navbar">
-        <li><a class="nav" href="#projects">Projects</a></li>
-        <li><a class="nav" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="navbar">
+      <nav>
+        <ul>
+          <li><a class="nav" href="#home">Home</a></li>
+          <li><a class="nav" href="#projects">Projects</a></li>
+          <li><a class="nav" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <section id="home">
       <h1>Portfolio / Matilda Jansson</h1>
       <p>
@@ -29,7 +32,6 @@
       </p>
     </section>
     <section id="projects">
-      <!-- <div class="line"></div> -->
       <h2>Projects</h2>
 
       <div class="projectDiv">
@@ -38,12 +40,32 @@
           Sampling
         </h3>
         <p class="date">Apr. 2025 - June 2025</p>
-        <p>About the project</p>
-        <p>Tools & skills:</p>
-        <a href="">Website</a>
-        <a href="">GitHub repository</a>
-        <div>
-          <img src="" alt="">
+        <p>
+          Part of the course DH2323 Computer Graphics and Interaction, this
+          project explores the combination of L-systems and Poisson-Disk
+          Sampling for efficient and visually plausible procedural forest
+          generation. By using Fast Poisson-Disk Sampling to control tree
+          placement and deterministic L-systems to generate tree structures, the
+          system enables the creation of large-scale forests with minimal manual
+          input. The implementation focuses on modularity and interactivity,
+          allowing users to adjust parameters and instantly visualize changes in
+          Unity. The project demonstrates how two well-established techniques
+          can be combined to achieve scalable, flexible, and aesthetically
+          convincing results. The resulting system is lightweight and
+          extendable, offering a practical tool for procedural content creation.
+        </p>
+        <p>Tools & skills: computer graphics, Unity, procedural generation</p>
+        <a
+          href="reports/procedural generation of forests using l systems and poisson disk sampling.pdf"
+          target="_blank"
+          >➞ Report</a
+        >
+        <div class="imageDiv">
+          <img
+            src="images/cg0.png"
+            alt="L-system trees placed with poisson-disk sampling"
+          />
+          <img src="images/cg1.png" alt="poisson-disk sampling" />
         </div>
       </div>
 
@@ -63,9 +85,17 @@
           complementary colors enhance memory retention of sustainability
           concepts.
         </p>
-        <p>Tools & skills: collaboration, user research, UX design</p>
-        <a href="">Website</a>
-        <a href="">GitHub repository</a>
+        <p>Tools & skills: user research, HCI, human perception</p>
+        <a
+          href="reports/The Impact of Color-Coded Sustainability  Infographics on Short-term Memory.pdf"
+          target="_blank"
+          >➞ Report</a
+        >
+        <div class="imageDiv">
+          <img src="images/color0.png" alt="Project report cover" />
+          <img src="images/color1.png" alt="Color circle" />
+          <img src="images/color2.png" alt="SDG memory cards" />
+        </div>
       </div>
 
       <div class="projectDiv">
@@ -84,9 +114,22 @@
           that simplifies kitchen sharing by making time slot booking easier and
           addressing issues of space management and cleanliness.
         </p>
-        <p>Tools & skills:</p>
-        <a href="">Website</a>
-        <a href="">GitHub repository</a>
+        <p>
+          Tools & skills: interaction design, design methods, user research,
+          Figma
+        </p>
+        <a
+          href="reports/workbook media technology and interaction design.pdf"
+          target="_blank"
+          >➞ Case study</a
+        >
+        <div class="imageDiv">
+          <img src="images/mdi0.png" alt="Login page" />
+          <img src="images/mdi1.png" alt="Homepage" />
+          <img src="images/mdi2.png" alt="Homepage with expanded card" />
+          <img src="images/mdi3.png" alt="Booking page" />
+          <img src="images/mdi4.png" alt="Profile page" />
+        </div>
       </div>
 
       <div class="projectDiv">
@@ -99,9 +142,28 @@
           implementation, reducing development time. The project won a UX design
           prize
         </p>
-        <p>Tools & skills: collaboration, Figma, React, web design</p>
-        <a href="https://matdrox.github.io/global-history/">Website</a>
-        <a href="">GitHub repository</a>
+        <p>Tools & skills: web development, UI design</p>
+        <a href="https://matdrox.github.io/global-history/" target="_blank"
+          >➞ Website</a
+        >
+        <div class="imageDiv">
+          <img
+            src="images/global1.png"
+            alt="Figma design frontpage light mode"
+          />
+          <img
+            src="images/global2.png"
+            alt="Figma design info page light mode"
+          />
+          <img
+            src="images/global3.png"
+            alt="Figma design frontpage dark mode"
+          />
+          <img
+            src="images/global4.png"
+            alt="Figma design info page dark mode"
+          />
+        </div>
       </div>
 
       <div class="projectDiv">
@@ -113,18 +175,67 @@
           design and develop the game, conducted user testing, and wrote a
           report analyzing the results.
         </p>
-        <p>Tools & skills: Blender, collaboration, user research</p>
-        <a href="">Website</a>
-        <a href="">GitHub repository</a>
+        <p>Tools & skills: HCI, multimodal technologies, user research</p>
+        <a
+          href="reports/How do auditory and visual instruction modalities in an  AR escape room affect user task performance and user  experience.pdf"
+          target="_blank"
+          >➞ Report</a
+        >
+        <div class="imageDiv">
+          <img src="images/ar0.png" alt="Front page of AR escape room report" />
+          <img
+            src="images/ar1.png"
+            alt="The 3d characters: Peri the parrot, Kaa the Cobra and Luna the cat"
+          />
+          <img
+            src="images/ar2.png"
+            alt="Someone playing the game, interacting with Luna the cat"
+          />
+          <img
+            src="images/ar3.png"
+            alt="Someone playing the game, interacting with Kaa the cobra"
+          />
+        </div>
       </div>
 
       <div class="projectDiv">
         <h3>Catstronauts: The Great Earth Escape</h3>
         <p class="date">Apr. 2025 - June 2025</p>
-        <p>Game text</p>
-        <p>Tools & skills: animation, collaboration, web design</p>
-        <a href="">Website</a>
-        <a href="">GitHub repository</a>
+        <p>
+          Catstronauts: The Great Earth Escape is a student project developed in
+          Godot as a cooperative multiplayer stealth-adventure game. The team
+          worked with pixel art graphics, frame-by-frame animation, and
+          cutscene-driven storytelling to create a lighthearted but challenging
+          co-op experience. Development included designing level progression,
+          implementing networked gameplay, and balancing stealth mechanics with
+          playful chaos. The project was documented in a full game design
+          document covering concept, target audience, technology, and business
+          plan. My main responsibilities were character design, story, and game
+          progression.
+        </p>
+        <p>Tools & skills: Game design & development, 2D animation</p>
+        <a
+          href="https://sites.google.com/view/catstronauts-game/start"
+          target="_blank"
+          >➞ Website</a
+        >
+        <a href="reports/GAME DESIGN DOCUMENT_ CATSTRONAUTS.pdf" target="_blank"
+          >➞ Game design document</a
+        >
+        <div class="imageDiv">
+          <img
+            src="images/cat0.png"
+            alt="Screenshot of the game in play mode"
+          />
+          <img
+            src="images/cat1.png"
+            alt="Meet the characters: Bob, Tuna, Kiki and Rupert. Four cats"
+          />
+          <img
+            src="images/cat2.png"
+            alt="Instructions of how to play the game"
+          />
+        </div>
       </div>
     </section>
   </body>
