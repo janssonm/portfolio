@@ -1,7 +1,7 @@
 * {
   font-family: NHaasGrotesk, Helvetica, Arial, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,21 +16,21 @@ section {
 #navbar {
   width: 100%;
   padding: 10px 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; 
+  right: 0;
 }
 
 #navbar {
   width: 100%;
   padding: 10px 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; 
+  right: 0;
 }
 
 .nav {
@@ -111,10 +111,41 @@ a::after {
   display: flex;
   height: 192px;
   margin: 32px 0;
+  flex-wrap: wrap;
 }
 
 img {
   object-fit: contain;
   height: 100%;
   padding-right: 16px;
+}
+
+#contact {
+  padding-top: 64px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#contactdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  flex: 1;
+}
+
+#contactlinks {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#profilepic {
+  height: 520px;
+  margin-right: -32px;
+  padding: 0;
 }
