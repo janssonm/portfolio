@@ -62,22 +62,26 @@ h3 {
 
 h1 {
   font-size: 72pt;
+  height: fit-content;
 }
 
 h2 {
   font-size: 22pt;
   font-weight: bold;
   font-weight: 500;
+  height: fit-content;
 }
 
 h3 {
   font-size: 16pt;
   font-weight: 500;
+  height: fit-content;
 }
 
 p {
   font-size: 12pt;
   margin: 0 0 16px 0;
+  height: fit-content;
 }
 
 a {
@@ -109,15 +113,16 @@ a::after {
 
 .imageDiv {
   display: flex;
-  height: 192px;
+  height: fit-content;
   margin: 32px 0;
   flex-wrap: wrap;
 }
 
 img {
   object-fit: contain;
-  height: 100%;
+  height: 192px;
   padding-right: 16px;
+  padding-bottom: 16px;
 }
 
 #contact {
@@ -144,8 +149,41 @@ img {
   box-sizing: border-box;
 }
 
+  #imagediv {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  }
+
 #profilepic {
   height: 520px;
   margin-right: -32px;
   padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  #contactdiv {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    flex: 1;
+    width: 100%;
+  }
+
+  #imagediv {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  }
+
+/*   #profilepic {
+  max-width: 100%;
+  height: auto;
+  max-height: 520px;
+} */
 }
