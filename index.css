@@ -162,9 +162,6 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
 
   #contactdiv {
     flex-direction: column;
@@ -181,9 +178,8 @@ img {
     justify-content: end;
   }
 
-/*   #profilepic {
-  max-width: 100%;
-  height: auto;
-  max-height: 520px;
-} */
+  h1 {
+    padding-top: 64px;
+  }
+
 }
