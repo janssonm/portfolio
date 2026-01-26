@@ -1,6 +1,12 @@
 * {
-  font-family: NHaasGrotesk, Helvetica, Arial, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol;
+  font-family:
+    NHaasGrotesk,
+    Helvetica,
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol;
   scroll-behavior: smooth;
 }
 
@@ -25,7 +31,7 @@ section {
 
 #navbar {
   width: 100%;
-  padding: 10px 0;
+  padding: 20px 0;
   background-color: #ffffff;
   position: fixed;
   top: 0;
@@ -82,6 +88,7 @@ p {
   font-size: 12pt;
   margin: 0 0 16px 0;
   height: fit-content;
+  max-width: 90%;
 }
 
 a {
@@ -97,7 +104,7 @@ a::after {
   padding: 64px 0 256px 0;
 }
 
-#projects {
+#experience, #projects {
   padding-top: 64px;
 }
 
@@ -118,6 +125,12 @@ a::after {
   flex-wrap: wrap;
 }
 
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #000000;
+}
+
 img {
   object-fit: contain;
   height: 192px;
@@ -136,33 +149,33 @@ img {
 #contactdiv {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
+  justify-content: start;
+  align-items: start;
   flex: 1;
+  padding: 20px 0;
+  gap: 20px;
 }
 
 #contactlinks {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding-top: 20px;
   box-sizing: border-box;
+  width: 50%;
 }
 
-  #imagediv {
-    display: flex;
-    align-items: end;
-    justify-content: end;
-  }
+#imagediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #profilepic {
   height: 520px;
-  margin-right: -32px;
+  /* margin-right: -32px; */
   padding: 0;
 }
 
 @media only screen and (max-width: 600px) {
-
   #contactdiv {
     flex-direction: column;
     justify-content: space-between;
@@ -181,5 +194,4 @@ img {
   h1 {
     padding-top: 64px;
   }
-
 }

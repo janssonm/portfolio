@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,21 +18,81 @@
       <nav>
         <ul>
           <li><a class="nav" href="#home">Home</a></li>
+          <li><a class="nav" href="#experience">Experience</a></li>
           <li><a class="nav" href="#projects">Projects</a></li>
-          <li><a class="nav" href="#contact">Contact</a></li>
+          <li><a class="nav" href="#contact">About me</a></li>
         </ul>
       </nav>
     </div>
     <section id="home">
       <h1>Portfolio / Matilda Jansson</h1>
       <p>
-        I am pursuing a Master of Science in Engineering at KTH with a
-        specialization in Interactive Media Technology, focusing on advanced
-        graphics, interaction design & software development
+        I am pursuing a Master of Science in Engineering and Interactive Media
+        Technology at KTH, focusing on advanced graphics, interaction design &
+        software development
       </p>
     </section>
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="projectDiv">
+        <h3>Fullstack internship at Skry</h3>
+        <p class="date">Jan. 2024 - May 2024</p>
+        <p>
+          During my internship, I contributed to the development of web
+          applications in an agile environment, working across both front-end
+          and back-end development. I built features and implemented
+          functionality using JavaScript with Vue and Ruby on Rails, working
+          with a ticket-based workflow and continuously integrating changes into
+          the codebase.
+        </p>
+      </div>
+    </section>
+
     <section id="projects">
       <h2>Projects</h2>
+
+      <div class="projectDiv">
+        <h3>Trombone Trolley</h3>
+        <p class="date">Apr. 2025 - June 2025</p>
+        <p>
+          In this VR music game for the course DH2413 Advanced Graphics and
+          Interaction, I was responsible for the environment design. I created
+          the game map using custom-made 3D models and implemented a procedural
+          generation system to support scalability and future expansion. I also
+          developed a custom shader to control the scene’s lighting and visual
+          atmosphere.
+        </p>
+        <p>
+          Tools & skills: computer graphics, shader programming, C#, Unity,
+          Blender, procedural generation
+        </p>
+        <a href="https://trombone-trolley.vercel.app/" target="_blank"
+          >↳ Website</a
+        >
+        <a href="https://github.com/WKoivula/Trombone-Trolley" target="_blank"
+          >↳ GitHub</a
+        >
+        <div class="imageDiv">
+          <img
+            src="images/trombone1.png"
+            alt="POV of player, showcasing custom shader for lighting and colors"
+          />
+          <img
+            src="images/trombone2.PNG"
+            alt="A man holding a trombone prop and wearing a VR headset, playing the game Trombone Trolley"
+          />
+          <img
+            src="images/trombone3.PNG"
+            alt="POV of player when playing the game"
+          />
+          <img
+            src="images/trombone4.PNG"
+            alt="Poster promoting the game, with a text saying: Trombone trolley feat. Trolley Trombone"
+          />
+        </div>
+        <div class="line"></div>
+      </div>
 
       <div class="projectDiv">
         <h3>
@@ -54,7 +114,9 @@
           convincing results. The resulting system is lightweight and
           extendable, offering a practical tool for procedural content creation.
         </p>
-        <p>Tools & skills: computer graphics, Unity, procedural generation</p>
+        <p>
+          Tools & skills: computer graphics, C#, Unity, procedural generation
+        </p>
         <a
           href="reports/procedural generation of forests using l systems and poisson disk sampling.pdf"
           target="_blank"
@@ -67,6 +129,7 @@
           />
           <img src="images/cg1.png" alt="poisson-disk sampling" />
         </div>
+        <div class="line"></div>
       </div>
 
       <div class="projectDiv">
@@ -96,6 +159,7 @@
           <img src="images/color1.png" alt="Color circle" />
           <img src="images/color2.png" alt="SDG memory cards" />
         </div>
+        <div class="line"></div>
       </div>
 
       <div class="projectDiv">
@@ -113,7 +177,7 @@
           plan. My main responsibilities were character design, story, and game
           progression.
         </p>
-        <p>Tools & skills: Game design & development, 2D animation</p>
+        <p>Tools & skills: game design & development, 2D animation</p>
         <a
           href="https://sites.google.com/view/catstronauts-game/start"
           target="_blank"
@@ -136,6 +200,7 @@
             alt="Instructions of how to play the game"
           />
         </div>
+        <div class="line"></div>
       </div>
 
       <div class="projectDiv">
@@ -170,6 +235,7 @@
           <img src="images/mdi3.png" alt="Booking page" />
           <img src="images/mdi4.png" alt="Profile page" />
         </div>
+        <div class="line"></div>
       </div>
 
       <div class="projectDiv">
@@ -181,7 +247,7 @@
           front-end developer, creating a cohesive design and translating it
           into a functional prototype and final implementation.
         </p>
-        <p>Tools & skills: web development, UI & UX design</p>
+        <p>Tools & skills: front-end development, UI & UX design</p>
         <a href="https://matdrox.github.io/global-history/" target="_blank"
           >↳ Website</a
         >
@@ -203,6 +269,7 @@
             alt="Figma design info page dark mode"
           />
         </div>
+        <div class="line"></div>
       </div>
 
       <div class="projectDiv">
@@ -235,19 +302,44 @@
             alt="Someone playing the game, interacting with Kaa the cobra"
           />
         </div>
+        <div class="line"></div>
       </div>
     </section>
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>About me</h2>
       <div id="contactdiv">
+        <div id="imagediv">
+          <img
+            src="images/matildaguitar1.jpg"
+            alt="Me, smiling and looking to the side, holding a guitar"
+            id="profilepic"
+          />
+        </div>
         <div id="contactlinks">
+          <p>
+            Hello! I am Matilda, a Master of Science student in Engineering and
+            Interactive Media Technology at KTH, graduating in June 2026.
+          </p>
+          <p>
+            I chose Media Technology for its blend of mathematics, programming,
+            and design, and my goal has always been to work in a creative field.
+            I initially explored UX and front-end development, but was recently
+            introduced to game development and computer graphics. I am currently
+            deepening my programming skills while learning new concepts and
+            technologies, and I am highly motivated and always open to opportunities to grow.
+          </p>
+          <p>
+            Feel free to reach out if you would like to work together or if you
+            have any questions.
+          </p>
+
           <a
             href="mailto:janssonmatilda01@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             class="contactlink"
           >
-            ↳ Send me an email
+            ↳ janssonmatilda01@gmail.com
           </a>
           <a
             href="https://www.linkedin.com/in/matilda-jansson-23635a23a/"
@@ -257,13 +349,14 @@
           >
             ↳ Linkedin
           </a>
-        </div>
-        <div id="imagediv">
-          <img
-            src="images/matildaguitar2.png"
-            alt="A girl smiling and looking to the side, holding a guitar"
-            id="profilepic"
-          />
+          <a
+            href="https://github.com/janssonm"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contactlink"
+          >
+            ↳ GitHub
+          </a>
         </div>
       </div>
     </section>
