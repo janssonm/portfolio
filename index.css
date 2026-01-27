@@ -39,16 +39,21 @@ section {
   right: 0;
 }
 
-.nav {
-  padding: 0 10px;
-}
-
-ul {
+.navlist {
   list-style: none;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: right;
+  margin: 0;
+}
+
+.nav {
+  padding: 0 10px;
+}
+
+ul {
+  list-style-type: "-   ";
   margin: 0;
 }
 
@@ -104,8 +109,13 @@ a::after {
   padding: 64px 0 256px 0;
 }
 
-#experience, #projects {
+#experience,
+#projects {
   padding-top: 64px;
+}
+
+.workListItem {
+  margin-bottom: 10px;
 }
 
 .projectDiv {
