@@ -1,0 +1,282 @@
+<!doctype html>
+<!--
+  The site is five files:
+    index.html  the content: the landing screen and the cases below it (this file)
+    style.css   how it looks: colours, fonts, layout, animations
+    sketch.js   the p5.js drawing of the six skiers  ← the one to play with
+    frames.js   loads the skier frames for sketch.js from assets/skier-frames.png (no need to touch)
+    case.js     makes the cases appear as you scroll to them
+  tools/bake-skier-frames.html makes assets/skier-frames.png from the ski video, if you ever change the clip.
+  Earlier versions are in archive/ (the boxed-headline landing page is archive/boxed-headline/, the cases with big type
+  are archive/cases-big-type/, the cases built like the landing screen are archive/cases-like-landing/, the
+  cases laid out like a type specimen are archive/cases-specimen/, the cases with the text in columns over a row
+  of pictures are archive/cases-columns/, the cases on a 3 × 2 grid are archive/cases-grid/, and the long
+  case studies (problem, approach, result) are archive/cases-long/).
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matilda Jansson's portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- metaball look for the "goo" skier: blur the dots, then cut the alpha hard so neighbours melt together -->
+    <filter id="goo">
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9" />
+    </filter>
+  </svg>
+
+  <!-- the landing screen: a top row (city, links), and below it the name, the skiers and the degree side by side -->
+  <header class="hero" id="top">
+    <div class="top">
+      <p>Stockholm, SE</p>
+      <nav class="links">
+        <a href="assets/CV%20Matilda%20Jansson%202026%20oct.pdf" target="_blank" rel="noopener">CV ↗</a>
+        <a href="https://github.com/janssonm" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/matilda-jansson-23635a23a/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="mailto:janssonmatilda01@gmail.com">Email ↗</a>
+      </nav>
+    </div>
+
+    <div class="stage">
+      <h1 class="title">Matilda Jansson</h1>
+      <!-- sketch.js puts the six skier canvases in here -->
+      <div class="grid" aria-label="Six copies of a looping skier animation, each printed in a different dot style"
+        role="img"></div>
+      <p class="title">Recent graduate with a<br>M.Sc. in Engineering &<br>Interactive Media Technology</p>
+    </div>
+  </header>
+
+  <main>
+    <article class="case about" id="about">
+      <h2 class="case-title reveal">About me</h2>
+
+      <div class="case-body">
+        <figure class="case-media reveal">
+          <img class="portrait" src="assets/IMG_3529.jpg" alt="Matilda Jansson">
+        </figure>
+
+        <div class="case-text">
+          <p class="reveal">Hello! I'm Matilda, and I recently graduated with a M.Sc. in Engineering and Interactive
+            Media Technology from KTH Royal Institute of Technology.</p>
+          <p class="reveal">I chose the Media Technology program for its blend of mathematics, programming, and design,
+            and my goal has always been to work with creative problem solving. Games and films especially interest me,
+            and I'm currently developing my skills in computer graphics and C++. I'm always up for a challenge, and
+            I’m eager to put my knowledge to use in the tech industry.</p>
+          <p class="reveal">If you think I'm the right person for your company, feel free to reach out! And if you would
+            like to check out some of my projects, please scroll down.</p>
+
+
+          <dl class="facts reveal">
+            <div>
+              <dt>Contact</dt>
+              <dd><a href="mailto:janssonmatilda01@gmail.com">Email ↗</a></dd>
+              <dd><a href="https://www.linkedin.com/in/matilda-jansson-23635a23a/" target="_blank"
+                  rel="noopener">LinkedIn
+                  ↗</a></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <article class="case" id="projects">
+      <h2 class="case-title reveal">Projects</h2>
+    </article>
+
+    <article class="case" id="thesis">
+      <h2 class="case-title reveal">01 Evaluating Minkowski pooling in CGVQM for video quality <br> assessment of modern
+        rendering distortions</h2>
+
+      <div class="case-body">
+        <dl class="facts reveal">
+          <div>
+            <dt>Master's thesis</dt>
+            <dd>KTH, 2026</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Video quality assessment</dd>
+            <dd>Modern rendering techniques</dd>
+            <dd>Deep learning</dd>
+            <dd>Python</dd>
+            <dd>PyTorch</dd>
+          </div>
+          <div>
+            <dt>Links</dt>
+            <dd><a href="assets/cgvqm/final_version_masters_thesis_matilda_jansson.pdf" target="_blank"
+                rel="noopener">Read the thesis (PDF) ↗</a></dd>
+          </div>
+        </dl>
+
+
+        <div class="case-text">
+          <p class="reveal">Modern rendering techniques such as path tracing, neural supersampling, and Gaussian
+            splatting introduce spatio-temporal distortions that traditional video quality metrics predict poorly. The
+            recently proposed Computer Graphics Video Quality Metric (CGVQM) by Intel addresses this by measuring
+            quality in the feature space of a pre-trained 3D convolutional neural network, but it aggregates its local
+            feature differences into a final score using mean pooling, which weights every region equally.</p>
+          <p class="reveal">I replaced the mean pooling with Minkowski pooling, which puts more weight on the stronger
+            local distortions. I varied its exponent over six values, p ∈ {1, 2, 3, 4, 6, 8}, re-calibrated the metric
+            for each on three video quality datasets, and evaluated every variant against human ratings on the CG-VQD
+            dataset of modern rendering distortions.</p>
+          <div class="reveal">
+            <h3 class="label">Result</h3>
+            <p class="stat">0.820 → 0.873</p>
+            <p>Agreement with human ratings (PLCC). My results show that implementing Minkowski pooling improves
+              agreement with human ratings of modern rendering distortions.</p>
+          </div>
+        </div>
+
+        <figure class="case-media reveal">
+          <video src="assets/cgvqm/neural-supersamp.mp4" muted loop playsinline preload="metadata"
+            aria-label="Distorted and reference video of neural supersampling"></video>
+          <figcaption class="caption">Neural supersampling: the distorted video (left) flickers and loses detail next
+            to its reference (right). Click the video to pause/play.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="case" id="trombone">
+      <h2 class="case-title reveal">02 Trombone Trolley</h2>
+
+      <div class="case-body">
+        <dl class="facts reveal">
+          <div>
+            <dt>DH2413 Advanced Graphics and Interaction</dt>
+            <dd>KTH, 2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Computer graphics</dd>
+            <dd>Shader programming</dd>
+            <dd>Unity</dd>
+            <dd>C#</dd>
+            <dd>Blender</dd>
+            <dd>Procedural generation</dd>
+          </div>
+          <div>
+            <dt>Links</dt>
+            <dd><a href="https://trombone-trolley.vercel.app/" target="_blank" rel="noopener">Website ↗</a></dd>
+            <dd><a href="https://github.com/WKoivula/Trombone-Trolley" target="_blank" rel="noopener">GitHub ↗</a></dd>
+          </div>
+        </dl>
+
+        <div class="case-text">
+          <p class="reveal">Trombone Trolley is a VR music game made in the course DH2413 Advanced Graphics and
+            Interaction. I was responsible for the environment design.</p>
+          <p class="reveal">I created the game map using a mix of existing assets and custom-made 3D models made in
+            Blender, and implemented a
+            procedural generation
+            system to support scalability and future expansion. I also developed a custom toon shader to control the
+            scene's
+            lighting and visual atmosphere.</p>
+          <div class="reveal">
+            <h3 class="label">Result</h3>
+            <p>In a few weeks, our team built a VR game for the course exhibition. Good communication kept us working
+              well together, and I gained a deeper understanding of graphics and game logic in Unity.</p>
+          </div>
+        </div>
+
+        <div class="case-media pair">
+          <figure class="reveal">
+            <img src="assets/trombone/trombone1.png"
+              alt="The player's view, showing the custom shader's lighting and colours.">
+            <figcaption class="caption">The player's view, with the custom shader setting the lighting and colours.
+            </figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="assets/trombone/trombone2.png"
+              alt="A man holding a trombone prop and wearing a VR headset, playing the game Trombone Trolley.">
+            <figcaption class="caption">A user playing the game.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="case" id="forests">
+      <h2 class="case-title reveal">03 Procedural generation of forests using L-systems and Poisson-disk sampling</h2>
+
+      <div class="case-body">
+        <dl class="facts reveal">
+          <div>
+            <dt>DH2323 Computer Graphics and Interaction</dt>
+            <dd>KTH, 2025</dd>
+          </div>
+          <div>
+            <dt>Skills</dt>
+            <dd>Unity</dd>
+            <dd>C#</dd>
+            <dd>L-systems</dd>
+            <dd>Poisson-disk sampling</dd>
+            <dd>Procedural generation</dd>
+          </div>
+          <div>
+            <dt>Links</dt>
+            <dd><a href="assets/l-system/DH2323_final_project.pdf" target="_blank" rel="noopener">Read the report (PDF)
+                ↗</a></dd>
+          </div>
+        </dl>
+
+        <div class="case-text">
+          <p class="reveal">This project was done as part of my very first computer graphics course. My project partner
+            and I combined two
+            techniques to generate forests in Unity. The Poisson-disk sampling algorithm is used to place trees
+            semi-randomly, and L-systems grow each tree from a
+            set of rewriting rules.</p>
+          <p class="reveal">We built the project on a Poisson-disk sampling tutorial by Sebastian Lague and an
+            open-source
+            L-system tree generator, and connected the two. Spacing, branching angle, segment length and growth
+            iterations can be adjusted in the implementation.</p>
+          <div class="reveal">
+            <h3 class="label">Result</h3>
+            <p>This is where I learned the basics of computer graphics, and found
+              out how fun it is to turn math into visuals.</p>
+          </div>
+        </div>
+
+        <div class="case-media pair">
+          <figure class="reveal">
+            <img role="img" src="/assets/l-system/Projekt klart.png"
+              aria-label="A forest of branching trees growing from the ground, drawn live in the browser."></img>
+            <figcaption class="caption">Example of output produced by the program.</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img role="img" src="/assets/l-system/poisson.png"
+              aria-label="A top view of a map with red dots representing placement of trees using poisson disk sampling."></img>
+            <figcaption class="caption">Placement with Poisson-disk sampling.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+
+  </main>
+
+  <!-- the end of the page: the landing screen's top row again, so the links are at hand when you've read it all -->
+  <footer class="top foot">
+    <p>Matilda Jansson, Stockholm, SE</p>
+    <nav class="links">
+      <a href="assets/CV%20Matilda%20Jansson%202026%20oct.pdf" target="_blank" rel="noopener">CV ↗</a>
+      <a href="https://github.com/janssonm" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/matilda-jansson-23635a23a/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="mailto:janssonmatilda01@gmail.com">Email ↗</a>
+    </nav>
+  </footer>
+
+  <div class="grain"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script src="frames.js"></script>
+  <script src="sketch.js"></script>
+  <script src="case.js"></script>
+</body>
+
+</html>

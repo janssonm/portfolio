@@ -1,0 +1,56 @@
+<!doctype html>
+<!--
+  Bakes the skier frames: turns assets/skier.mp4 into assets/skier-frames.png, which the site loads instead of the
+  video. Only needed when you change the clip or the ink settings in video-to-frames.js.
+
+  1. Open http://localhost:5180/tools/bake-skier-frames.html (it needs the local server, not the file directly).
+  2. Wait a few seconds, then click the download link.
+  3. Put the file in assets/, replacing the old skier-frames.png.
+  4. Set FRAME_COUNT in sketch.js to the number of frames shown here.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bake skier frames</title>
+  <style>
+    body { margin: 32px; font: 16px/1.4 -apple-system, Helvetica, Arial, sans-serif; background: #e6e6e6; color: #111; }
+    img { display: block; margin-top: 16px; height: 70vh; image-rendering: pixelated; background: #000; }
+  </style>
+</head>
+
+<body>
+  <p id="status">Reading the clip…</p>
+  <p><a id="download" hidden download="skier-frames.png">Download skier-frames.png</a></p>
+  <img id="preview" alt="" hidden>
+
+  <script src="video-to-frames.js"></script>
+  <script>
+    videoToFrames('../assets/skier.mp4', 24, 160).then(({ frames, width, height }) => {
+      // one grey image: the frames stacked top to bottom, ink 0…1 stored as 0…255
+      const c = document.createElement('canvas');
+      c.width = width; c.height = height * frames.length;
+      const g = c.getContext('2d'), img = g.createImageData(c.width, c.height);
+      frames.forEach((d, f) => {
+        for (let i = 0; i < d.length; i++) {
+          const v = Math.round(d[i] * 255), o = (f * width * height + i) * 4;
+          img.data[o] = img.data[o + 1] = img.data[o + 2] = v;
+          img.data[o + 3] = 255;
+        }
+      });
+      g.putImageData(img, 0, 0);
+
+      c.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        document.getElementById('download').href = url;
+        document.getElementById('download').hidden = false;
+        document.getElementById('preview').src = url;
+        document.getElementById('preview').hidden = false;
+        document.getElementById('status').textContent =
+          `${frames.length} frames of ${width} × ${height} px. Set FRAME_COUNT in sketch.js to ${frames.length}.`;
+      }, 'image/png');
+    });
+  </script>
+</body>
+
+</html>

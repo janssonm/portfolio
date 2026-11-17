@@ -1,0 +1,11 @@
+# macOS and editor files
+.DS_Store
+.claude/
+
+# earlier design versions, kept only on this computer
+archive/
+
+# pictures the site doesn't use
+assets/IMG_0220 (kopia).jpeg
+assets/cgvqm/thesis-knit.webp
+assets/cgvqm/thesis-frames.webp
